@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manager List</title>
+  <link rel="stylesheet" href="./css/manager/manageroperations.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"> 
+  <script type="module" src="./js/authutility.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Manager List</h1>
+    <div id="managerList"></div>
+    <table id="managerTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Mobile No</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="managerTableBody"></tbody>
+    </table>
+    <br><br>
+    <button id="createManagerButton">Create Manager</button>
+    <a href="admin.html" class="adminpage-button">Back to Admin Page</a>
+  </div>
+  <script type ="module" src="/js/manager/manageroperations.js"></script>
+
+</body>
+</html>

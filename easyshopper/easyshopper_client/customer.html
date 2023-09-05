@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Page</title>
+  <link rel="stylesheet" href="./css/customer/customer.css">
+  <script type="module" src="./js/authutility.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1 id="welcome"></h1>
+    <div class="buttons-container">
+      <button id="changePasswordButton">Change Password</button>
+      <button id="updateProfileButton">Update Profile</button>
+      <button id="viewPurchaseHistoryButton">View Purchase History</button>
+      <button id="openWalletAccountButton">Open Wallet Account</button>
+      <button id="addMoneyToWalletButton">Add Money to Wallet</button>
+      <button id="viewWalletBalanceButton">View Wallet Balance</button>
+      <button id="redeemRewardPointsButton">Redeem Reward Points</button>
+      <button id="logoutButton">Logout</button>
+    </div>
+    <table id="productsTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Unit Price</th>
+          <th>Stock Quantity</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="productsTableBody">
+        <!-- Product details will be added here dynamically -->
+      </tbody>
+    </table>
+
+    <button id="viewCartButton">View Cart</button>
+  </div>
+  <script type ="module" src="./js/customer/customer.js"></script>
+</body>
+</html>

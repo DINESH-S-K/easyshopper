@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Cart</title>
+  <link rel="stylesheet" href="./css/cart/viewcart.css">
+  <script type="module" src="./js/authutility.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>View Cart</h1>
+    <h2>Cart Summary</h2>
+    <table id="cartSummaryTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Quantity</th>
+          <th>Total Amount</th>
+        </tr>
+      </thead>
+      <tbody id="cartSummaryTableBody">
+        <!-- Cart summary data will be added here dynamically -->
+      </tbody>
+    </table>
+
+    <h2>Cart Items</h2>
+    <table id="cartItemsTable">
+      <thead>
+        <tr>
+          <th>Product Name</th>
+          <th>Quantity</th>
+          <th>Unit Price</th>
+          <th>Total Price</th>
+           <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="cartItemsTableBody">
+        <!-- Cart items data will be added here dynamically -->
+      </tbody>
+    </table>
+    <button id="makeOrderButton">Make Order</button>
+    <button id="customerPageButton">Back to Customer Page</button>
+  </div>
+  <script type ="module" src="./js/cart/viewcart.js"></script>
+</body>
+</html>

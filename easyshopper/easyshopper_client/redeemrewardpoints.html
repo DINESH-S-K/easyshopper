@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redeem Reward Points</title>
+  <link rel="stylesheet" href="./css/customer/redeemrewardpoints.css">
+  <script type="module" src="./js/authutility.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Redeem Reward Points</h1>
+    <div id="balanceMessage">10 points = $1</div>
+    <div class="reward-points-info">
+      <div class="balance-info">
+        <span>Old Balance:</span>
+        <span id="oldBalance">Loading...</span>
+      </div>
+      <div class="reward-points">
+        <span>Reward Points:</span>
+        <span id="rewardPoints">Loading...</span>
+      </div>
+    </div>
+    <div class="reward-points-form">
+      <label for="pin">Enter PIN:</label>
+      <input type="password" id="pin" required>
+      <button id="submitRedeemButton">Redeem</button>
+    </div>
+    <div id="newBalanceDisplay"></div>
+    <button id="backButton">Back</button>
+  </div>
+  <script type ="module" src="./js/customer/redeemrewardpoints.js"></script>
+</body>
+</html>
+

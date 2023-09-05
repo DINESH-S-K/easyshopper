@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Make Order</title>
+  <link rel="stylesheet" href="./css/order/makeorder.css">
+  <script type="module" src="./js/authutility.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Make Order</h1>
+    <h2>Order Summary</h2>
+    <table id="orderSummaryTable">
+      <thead>
+        <tr>
+          <th>Order ID</th>
+          <th>Order Date</th>
+          <th>Quantity</th>
+          <th>Purchasing Amount</th>
+        </tr>
+      </thead>
+      <tbody id="orderSummaryTableBody">
+        <!-- Order summary data will be added here dynamically -->
+      </tbody>
+    </table>
+
+    <h2>Order Items</h2>
+    <table id="orderItemsTable">
+      <thead>
+        <tr>
+          <th>Product Name</th>
+          <th>Quantity</th>
+          <th>Unit Price</th>
+          <th>Total Price</th>
+        </tr>
+      </thead>
+      <tbody id="orderItemsTableBody">
+        <!-- Order items data will be added here dynamically -->
+      </tbody>
+    </table>
+
+    <div class="order-buttons">
+      <button id="purchaseOrderButton">Purchase Order</button>
+      <button id="cancelOrderButton">Cancel Order</button>
+    </div>
+  </div>
+  <script type ="module" src="./js/order/makeorder.js"></script>
+</body>
+</html>

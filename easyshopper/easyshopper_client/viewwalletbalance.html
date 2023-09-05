@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Wallet Balance</title>
+  <link rel="stylesheet" href="./css/wallet/viewwalletbalance.css">
+  <script type="module" src="./js/authutility.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>View Wallet Balance</h1>
+    <div class="pin-form">
+      <label for="pin">Enter PIN:</label>
+      <input type="password" id="pin" required>
+      <button id="submitPinButton">Submit</button>
+    </div>
+    <div id="walletBalanceDisplay"></div>
+    <button id="backButton">Back</button>
+  </div>
+  <script type ="module" src="./js/wallet/viewwalletbalance.js"></script>
+</body>
+</html>
+

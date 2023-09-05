@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Purchase History</title>
+  <link rel="stylesheet" href="./css/customer/viewpurchasehistory.css">
+  <script type="module" src="./js/authutility.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>View Purchase History</h1>
+    <table id="purchaseHistoryTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Order ID</th>
+          <th>Purchase Date</th>
+          <th>Amount Debited</th>
+          <th>Wallet Balance</th>
+        </tr>
+      </thead>
+      <tbody id="purchaseHistoryTableBody">
+        <!-- Purchase history data will be added here dynamically -->
+      </tbody>
+    </table>
+    <button id="backButton">Back</button>
+  </div>
+  <script type ="module" src="./js/customer/viewpurchasehistory.js"></script>
+</body>
+</html>

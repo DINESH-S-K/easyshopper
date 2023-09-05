@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory Page</title>
+  <script type="module" src="./js/authutility.js"></script>
+  <link rel="stylesheet" href="./css/inventory/inventoryoperations.css"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+</head>
+<body>
+  <div class="container">
+    <h1>Inventory Page</h1>
+    <table id="inventoryTable">
+      <thead>
+        <tr>
+          <th>Description</th>
+          <!-- <th>Created By</th>
+          <th>Updated By</th> -->
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="inventoryBody"></tbody>
+    </table>
+    <button id="addInventoryButton">New Inventory</button>
+    <button id="backButton">Back</button>
+  </div>
+  <script type ="module" src="./js/inventory/inventoryoperations.js"></script>
+</body>
+</html>

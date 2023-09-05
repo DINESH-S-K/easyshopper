@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manager Registration</title>
+  <link rel="stylesheet" href="./css/manager/createmanager.css">
+  <script type="module" src="./js/authutility.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Manager Registration</h1>
+    <form id="registration-form">
+
+      <label for="username">Username:</label>
+      <input type="text" id="username" placeholder="Username" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="Email" required>
+
+      <label for="mobileNo">Mobile No:</label>
+      <input type="text" id="mobileNo" placeholder="Mobile No" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" placeholder="Password" required>
+
+      <label for="role">Role:</label>
+      <div class="role-options">
+        <input type="radio" id="roleAdmin" name="role" value="1">
+        <label for="roleAdmin">Admin</label>
+        <input type="radio" id="roleManager" name="role" value="2">
+        <label for="roleManager">Manager</label>
+        <input type="radio" id="roleCustomer" name="role" value="3">
+        <label for="roleCustomer">Customer</label>
+        <br>
+        <br>
+        <button type="submit" id="submit">Register</button>
+    </form>
+  </div>
+  <a href="admin.html" class="homepage-button">Admin Page</a>
+  <script type ="module" src="/js/manager/createmanager.js"></script>
+</body>
+
+</html>
