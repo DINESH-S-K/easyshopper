@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <constant name="struts.devMode" value="false"/>
+    <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
+
+    <package name="myPackage" extends="json-default" namespace="/">
+
+        <result-types>
+            <result-type name="json" class="org.apache.struts2.json.JSONResult"/>
+        </result-types>
+
+        <interceptors>
+            <interceptor name="timer" class="com.opensymphony.xwork2.interceptor.TimerInterceptor"/>
+            <interceptor name="logger" class="com.opensymphony.xwork2.interceptor.LoggingInterceptor"/>
+            <interceptor name="authorization" class="org.zoho.server.interceptor.AuthorizationInterceptor"/>
+
+            <interceptor-stack name="myStack">
+                <interceptor-ref name="timer"/>
+                <interceptor-ref name="logger"/>
+            </interceptor-stack>
+
+        </interceptors>
+
+        <action name="register" class="org.zoho.server.actions.user.UserAccountManager" method="register">
+            <interceptor-ref name="myStack"/>
+            <result name="success" type="json"/>
+            <result name="failure" type="httpheader">
+                <param name="error">500</param>
+                <param name="errorMessage">Enter a Valid Input</param>
+            </result>
+            <result name="bad request" type="httpheader">
+                <param name="error">400</param>
+                <param name="errorMessage">Enter a Valid Input</param>
+            </result>
+            <result name="conflict" type="httpheader">
+                <param name="status">409</param>
+            </result>
+        </action>
+
+        <action name="login" class="org.zoho.server.actions.user.UserAccountManager" method="login">
+            <interceptor-ref name="myStack"/>
+            <result name="login" type="httpheader">
+                <param name="status">204</param>
+            </result>
+            <result name="failure" type="httpheader">
+                <param name="status">400</param>
+            </result>
+        </action>
+
+        <action name="forgetPassword" class="org.zoho.server.actions.user.UserAccountManager" method="forgetPassword">
+            <interceptor-ref name="myStack"/>
+        </action>
+
+        <action name="forgetAndChangePassword" class="org.zoho.server.actions.user.UserAccountManager"
+                method="forgetAndChangePassword">
+            <interceptor-ref name="myStack"/>
+        </action>
+
+        <action name="*" class="org.zoho.server.controller.ActionController" method="execute">
+            <interceptor-ref name="myStack"/>
+            <interceptor-ref name="authorization"/>
+            <result name="success" type="json"/>
+        </action>
+
+    </package>
+
+</struts>
